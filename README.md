@@ -86,7 +86,7 @@ Se deberá rellenar lo siguiente:
 ├──📜 main.js
 ├──📃 package-lock.json
 ├──📃 package.json
-└── ℹ️  README.md
+└──ℹ️ README.md
 ```
 
 ## Ejecución
