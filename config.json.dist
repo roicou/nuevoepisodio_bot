@@ -1,0 +1,20 @@
+{
+    "telegram": {
+        "bot": "@nuevoepidosio_bot",
+        "url": "https://t.me/nuevoepisodio_bot/",
+        "token": "<BOT-TOKEN-HERE>"
+    },
+    "mongodb": {
+        "uri":"<MONGODB-URI-HERE>",
+        "options": {
+            "connectTimeoutMS": 60000,
+            "socketTimeoutMS": 600000,
+            "useUnifiedTopology": true
+        },
+        "db": "<MONGODB-DB-HERE>"
+    },
+    "tmdb": {
+        "url": "https://api.themoviedb.org/3",
+        "api": "<TMDB-API-KEY-HERE>"
+    }
+}

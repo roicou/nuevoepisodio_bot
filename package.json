@@ -1,0 +1,26 @@
+{
+  "name": "nuevoepisodio_bot",
+  "version": "1.0.0",
+  "description": "Bot de Telegram que notifica nuevos episodios",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roicou/nuevoepisodio_bot.git"
+  },
+  "author": "Roi C.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roicou/nuevoepisodio_bot/issues"
+  },
+  "homepage": "https://github.com/roicou/nuevoepisodio_bot#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.1",
+    "node-cron": "^3.0.0",
+    "telegraf": "^4.7.0"
+  }
+}
