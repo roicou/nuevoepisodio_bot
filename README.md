@@ -58,35 +58,34 @@ Se deberá rellenar lo siguiente:
 ## Estructura
 ```
 ./
-├──📁 commands/
-│   ├──📁 commands/
-│   │   ├──📜 borrar_serie.js
-│   │   ├──📜 detener.js
-│   │   ├──📜 nueva_serie.js
-│   │   ├──📜 proximos_estrenos.js
-│   │   ├──📜 series.js
-│   │   └──📜 start.js
-│   ├──📜 commands.index.js
-├──📁 db/
-│   └──📜 user.db.js
-├──📁 jobs/
-│   └──📜 check_shows.js
-├──📁 libs/
-│   ├──📜 mongodb.js
-│   ├──📜 prepare_shows.js
-│   └──📜 tmdb.js
-├──📁 services/
-│   └──📜 user.service.js
-├──📄 .dockerignore
-├──📄 .gitignore
-├──📃 config.json
-├──📄 config.json.dist
-├──🐋 Dockerfile
-├──🔑 LICENSE
-├──📜 main.js
-├──📃 package-lock.json
-├──📃 package.json
-└──ℹ️ README.md
+├── 📁 commands
+│   ├── 📁 commands
+│   │   ├── 📄 borrar_serie.js
+│   │   ├── 📄 detener.js
+│   │   ├── 📄 nueva_serie.js
+│   │   ├── 📄 proximos_estrenos.js
+│   │   ├── 📄 series.js
+│   │   └── 📄 start.js
+│   └── 📄 commands.index.js
+├── 📁 db
+│   └── 📄 user.db.js
+├── 📁 jobs
+│   └── 📄 check_shows.js
+├── 📁 libs
+│   ├── 📄 mongodb.js
+│   ├── 📄 prepare_shows.js
+│   └── 📄 tmdb.js
+├── 📁 services
+│   └── 📄 user.service.js
+├── 📄 .dockerignore
+├── 📄 .gitignore
+├── 📄 config.json.dist
+├── 📄 Dockerfile
+├── 🔑 LICENSE
+├── 📄 main.js
+├── 📄 package-lock.json
+├── 📄 package.json
+└── ℹ️ README.md
 ```
 
 ## Ejecución
