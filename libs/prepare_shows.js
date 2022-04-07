@@ -69,7 +69,7 @@ async function sendEpisodes(bot, user, cron = false) {
                 let inputmediaphotos_to_send = [];
                 let caption_to_send = [];
                 let limit = inputmediaphotos.length > 10 ? 10 : inputmediaphotos.length;
-                for (let i = 0; i < limit; ijss++) {
+                for (let i = 0; i < limit; i++) {
                     inputmediaphotos_to_send.push(inputmediaphotos.shift());
                     caption_to_send.push(caption.shift());
                 }
