@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "lib": [
+            "ES2021",
+            "esnext.asynciterable"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/types"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "pretty": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "allowJs": true,
+        "noEmit": false,
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+        }
+    },
+    "include": [
+        "./src/**/*",
+        "custom.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "tests"
+    ]
+  }
