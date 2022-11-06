@@ -61,7 +61,7 @@ if (config.debug) {
             format: format_display
         })
     );
-// } else {
+} else {
     transports.push(transport_all, transport_error);
     transport_all.on('rotate', () => {
         // do something fun
