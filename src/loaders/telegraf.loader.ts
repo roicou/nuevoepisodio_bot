@@ -50,12 +50,12 @@ export default async (bot: Telegraf<CustomContext>) => {
 
 
     // cron at 10:00 AM
-    try {
-        await telegrafService.sendTodayEpisodes(bot, 10)//parseInt(DateTime.local().toFormat('HH')));
-    } catch (error) {
-        logger.error(error);
-    }
     cron.schedule('0 * * * *', async () => {
+        try {
+            await telegrafService.sendTodayEpisodes(bot, 10)//parseInt(DateTime.local().toFormat('HH')));
+        } catch (error) {
+            logger.error(error);
+        }
     });
 
 }
