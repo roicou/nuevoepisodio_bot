@@ -8,8 +8,14 @@ import { DateTime, Settings } from 'luxon';
 import logger from '@/libs/logger';
 Settings.defaultZone = config.timezone;
 class TMDBService {
+    /**
+     * search shows by name in TMDB and return all results
+     * @param show_name 
+     * @returns 
+     */
     public async getShowsByName(show_name: string) {
-        show_name = this.removeNoCommonCharacters(show_name);
+        // characters like 'á' or 'ñ' are not common in english, so we change them to 'a' or 'n', so we can search them
+        show_name = this.changeNoCommonCharacters(show_name);
         const url = config.tmdb.url + "/search/tv?api_key=" + config.tmdb.api_key + "&language=es-ES&page=1&query=" + show_name;
         try {
             const response = await axios.get(url);
@@ -20,10 +26,18 @@ class TMDBService {
         }
     }
 
-    private removeNoCommonCharacters(text: string): string {
+    /**
+     * change characters that are not common in english
+     * @param text 
+     * @returns 
+     */
+    private changeNoCommonCharacters(text: string): string {
         return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
 
+    /**
+     * update shows in ddbb
+     */
     public async updateShows() {
         logger.info("Updating shows...");
         const users = await userService.getAllUsers();
@@ -73,6 +87,11 @@ class TMDBService {
         logger.info("Updating shows done.")
     }
 
+    /**
+     * get show info by id
+     * @param showId 
+     * @returns 
+     */
     public async getShowById(showId: number | string) {
         // get show from TMDB
         const url = config.tmdb.url + "/tv/" + showId + "?api_key=" + config.tmdb.api_key + "&language=es-ES";

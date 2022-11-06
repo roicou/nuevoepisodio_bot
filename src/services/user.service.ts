@@ -16,10 +16,19 @@ class UserService {
         return userModel.findOne({ id: telegram_id });
     }
 
+    /**
+     * get all users from database
+     * @returns 
+     */
     public async getAllUsers(): Promise<UserInterface[]> {
         return userModel.find();
     }
 
+    /**
+     * get users that have show in their list and show info
+     * @param hour notification hour
+     * @returns 
+     */
     public async getAllUsersWithShows(hour: number) {
         return userModel.aggregate([
             {
@@ -78,6 +87,12 @@ class UserService {
         await userModel.bulkWrite(bulk);
     }
 
+    /**
+     * creates user in database
+     * @param id telegram id
+     * @param language_code 
+     * @returns 
+     */
     public async createUser(id: number, language_code: string): Promise<UserInterface> {
         return userModel.create({
             id,
@@ -90,9 +105,22 @@ class UserService {
         });
     }
 
+    /**
+     * add show to user
+     * @param telegram_id telegram id
+     * @param show_id 
+     * @returns 
+     */
     public async addShow(telegram_id: number, show_id: number): Promise<UpdateResult> {
         return userModel.updateOne({ id: telegram_id }, { $push: { shows: show_id } });
     }
+
+    /**
+     * delete show from user
+     * @param telegram_id telegram id
+     * @param show_id 
+     * @returns 
+     */
     public async deleteShow(telegram_id: number, show_id: number): Promise<UpdateResult> {
         return userModel.updateOne({ id: telegram_id }, { $pull: { shows: show_id } });
     }
