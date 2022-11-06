@@ -1,8 +1,11 @@
 export default interface ShowInterface {
-    id?: string;
+    id?: number;
     name?: string;
-    nextEpisode?: Date | null;
-    poster?: string;
+    episode?: string | null;
+    date?: Date | null;
+    service?: string;
+    poster_url?: string;
+    poster_id?: string;
     createdAt?: Date;
     updatedAt?: Date;
     __v?: number;

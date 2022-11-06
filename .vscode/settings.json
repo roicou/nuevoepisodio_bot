@@ -1,0 +1,8 @@
+{
+    "key": "Ctrl + Shift + Q",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+        "snippet": "logger.debug('${TM_SELECTED_TEXT}$1')$2;"
+    }
+}

@@ -1,9 +1,10 @@
 export default interface UserInterface {
-    id?: string;
-    shows?: string[];
+    id?: number;
+    shows?: number[];
     config?: {
         language?: string;
         active?: boolean;
+        notification_hour?: number;
     },
     createdAt?: Date;
     updatedAt?: Date;

@@ -1,16 +1,16 @@
 // model for user.interface
 
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import UserInterface from '@/interfaces/user.interface';
 
-export default model<UserInterface>('User', new Schema({
+export default model<UserInterface>('User', new Schema<UserInterface>({
     id: {
-        type: String,
+        type: Number,
         required: true,
-        unique: true,
+        unique: true
     },
     shows: {
-        type: [String],
+        type: [Number],
         required: false,
         default: [],
     },
@@ -18,13 +18,18 @@ export default model<UserInterface>('User', new Schema({
         language: {
             type: String,
             required: false,
-            default: 'en',
+            default: 'es',
         },
         active: {
             type: Boolean,
             required: false,
             default: true,
         },
+        notification_hour: {
+            type: Number,
+            required: false,
+            default: 10,
+        }
     },
     createdAt: {
         type: Date,

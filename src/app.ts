@@ -13,7 +13,7 @@ import CustomContext from './interfaces/customcontext.interface';
 
 void (async () => {
     try {
-        const bot: Telegraf<CustomContext> = new Telegraf(config.telegram.token);
+        const bot: Telegraf<CustomContext> = new Telegraf(config.debug ? config.telegram.token_debug : config.telegram.token);
         await loaders(bot);
         await bot.launch();
         process.once('SIGINT', () => bot.stop('SIGINT'));

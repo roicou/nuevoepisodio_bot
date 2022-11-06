@@ -1,7 +1,5 @@
 import winston from 'winston';
 import config from '@/config';
-// import { DateTime, Settings } from 'luxon';
-// Settings.defaultZone = 'Europe/Madrid';
 import 'winston-daily-rotate-file';
 import path from 'path';
 
@@ -81,11 +79,11 @@ if (config.debug) {
 }
 
 
-const LoggerInstance = winston.createLogger({
+const logger = winston.createLogger({
     level: (config.debug) ? 'debug' : 'info',
     format: format_log,
     transports
 });
 
 
-export default LoggerInstance;
+export default logger;
