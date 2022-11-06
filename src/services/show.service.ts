@@ -48,7 +48,7 @@ class ShowService {
     }
 
     public async getNextEpisodes(shows_ids: (string | number)[]): Promise<ShowInterface[]> {
-        return showModel.find({ id: { $in: shows_ids }, date: { $gte: DateTime.local().startOf('day').toJSDate() } });
+        return showModel.find({ id: { $in: shows_ids }, date: { $gte: DateTime.local().startOf('day').toJSDate() } }, {}, { sort: { date: 1 } });
     }
 }
 export default new ShowService();
