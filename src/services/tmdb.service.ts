@@ -1,3 +1,8 @@
+/**
+ * TMDB services
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import config from '@/config';
 import userService from '@/services/user.service';
 import _ from 'lodash';
@@ -13,7 +18,7 @@ class TMDBService {
      * @param show_name 
      * @returns 
      */
-    public async getShowsByName(show_name: string) {
+    public async getShowsByName(show_name: string): Promise<any> {
         // characters like 'á' or 'ñ' are not common in english, so we change them to 'a' or 'n', so we can search them
         show_name = this.changeNoCommonCharacters(show_name);
         const url = config.tmdb.url + "/search/tv?api_key=" + config.tmdb.api_key + "&language=es-ES&page=1&query=" + show_name;
@@ -36,9 +41,9 @@ class TMDBService {
     }
 
     /**
-     * update shows in ddbb
+     * Search new episodes in TMDB and update shows in database
      */
-    public async updateShows() {
+    public async updateShows(): Promise<void> {
         logger.info("Updating shows...");
         const users = await userService.getAllUsers();
         // get shows array from users.shows and flatten it to one array and remove duplicates
@@ -64,7 +69,8 @@ class TMDBService {
                     date: date ? DateTime.fromFormat(date, 'yyyy-MM-dd').toJSDate() : null,
                     service: show_info.networks.map(network => network.name).join(', '),
                     poster_url: show_info.poster_path ? show_info.poster_path : null,
-                    poster_id: null
+                    poster_id: null,
+                    poster_debug_id: null,
                 };
                 const db_show = _.find(db_shows, { id: show_info.id });
                 if (db_show && db_show.poster_url === show_info.poster_path) {
@@ -92,7 +98,7 @@ class TMDBService {
      * @param showId 
      * @returns 
      */
-    public async getShowById(showId: number | string) {
+    public async getShowById(showId: number | string): Promise<any> {
         // get show from TMDB
         const url = config.tmdb.url + "/tv/" + showId + "?api_key=" + config.tmdb.api_key + "&language=es-ES";
         // const url = config.tmdb.url + "/tv/on_the_air?api_key=" + config.tmdb.api_key + "&language=es-ES";

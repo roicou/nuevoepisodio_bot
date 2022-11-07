@@ -1,7 +1,14 @@
+/**
+ * Script to optimize users collection for new version of the app
+ * ! ONLY RUN THIS SCRIPT ONCE !
+ * @author Roi C. <https://github.com/roicou/>
+ * @version 1.0.0
+ * @license MIT
+ */
 import mongooseLoader from '@/loaders/mongoose.loader';
 import userService from '@/services/user.service';
 
-void (async () => {
+void (async (): Promise<void> => {
     try {
         await mongooseLoader();
     } catch (e) {

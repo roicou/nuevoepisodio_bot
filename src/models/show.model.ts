@@ -1,3 +1,8 @@
+/**
+ * show mongoose model
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import { Schema, model } from 'mongoose';
 import ShowInterface from '@/interfaces/show.interface';
 
@@ -33,6 +38,11 @@ export default model<ShowInterface>('Show', new Schema<ShowInterface>({
         default: null,
     },
     poster_id: {
+        type: String,
+        required: false,
+        default: null,
+    },
+    poster_debug_id: {
         type: String,
         required: false,
         default: null,

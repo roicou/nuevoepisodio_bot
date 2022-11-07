@@ -1,7 +1,15 @@
+/**
+ * mongoose loader
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import mongoose from 'mongoose';
 import config from '@/config';
 import logger from '@/libs/logger'
 
+/**
+ * Load mongoose and connect to database
+ */
 export default async (): Promise<void> => {
     try {
 

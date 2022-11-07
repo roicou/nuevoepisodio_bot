@@ -1,10 +1,24 @@
+/**
+ * user service
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import userModel from "@/models/user.model";
 import UserInterface from "@/interfaces/user.interface";
 import { DateTime, Settings } from "luxon";
 import config from "@/config";
 import { UpdateResult } from "mongodb";
+import logger from "@/libs/logger";
 Settings.defaultZone = config.timezone;
 class UserService {
+    /**
+     * update notification hour
+     * @param id telegram id
+     * @param hour  
+     */
+    public async updateUserNotificationTime(id: number, hour: number): Promise<UpdateResult> {
+        return userModel.updateOne({ id }, { $set: { "config.notification_hour": hour } });
+    }
 
     /**
      * gets user from database

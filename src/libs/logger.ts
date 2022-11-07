@@ -1,7 +1,14 @@
+/**
+ * logger library
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import winston from 'winston';
 import config from '@/config';
 import 'winston-daily-rotate-file';
 import path from 'path';
+import { DateTime, Settings } from 'luxon';
+Settings.defaultZone = config.timezone;
 
 
 const format_log = winston.format.combine(
@@ -9,14 +16,11 @@ const format_log = winston.format.combine(
         stack: true,
         metadata: true
     }),
-    winston.format.timestamp({
-        format: 'YYYY-MM-DD HH:mm:ss'
-    }),
     winston.format.printf(info => {
         if (info.level.indexOf("error") > -1) {
-            return `${info.timestamp} ${info.level}: ${info.stack}`;
+            return `${DateTime.local().toFormat('yyyy-MM-dd HH:mm:ss')} ${info.level}: ${info.stack}`;
         }
-        return `${info.timestamp} ${info.level}: ${info.message}`;
+        return `${DateTime.local().toFormat('yyyy-MM-dd HH:mm:ss')} ${info.level}: ${info.message}`;
     })
 );
 
@@ -25,17 +29,14 @@ const format_display = winston.format.combine(
         stack: true,
         metadata: true
     }),
-    winston.format.timestamp({
-        format: 'YYYY-MM-DD HH:mm:ss'
-    }),
     winston.format.colorize({
         all: true
     }),
     winston.format.printf(info => {
         if (info.level.indexOf("error") > -1) {
-            return `${info.timestamp} ${info.level}: ${info.stack}`;
+            return `${DateTime.local().toFormat('yyyy-MM-dd HH:mm:ss')} ${info.level}: ${info.stack}`;
         }
-        return `${info.timestamp} ${info.level}: ${info.message}`;
+        return `${DateTime.local().toFormat('yyyy-MM-dd HH:mm:ss')} ${info.level}: ${info.message}`;
     })
 )
 const transport_all = new winston.transports.DailyRotateFile({
@@ -55,13 +56,12 @@ const transport_error = new winston.transports.DailyRotateFile({
 
 
 const transports = [];
-if (config.debug) {
-    transports.push(
-        new winston.transports.Console({
-            format: format_display
-        })
-    );
-} else {
+transports.push(
+    new winston.transports.Console({
+        format: format_display
+    })
+);
+if (!config.debug) {
     transports.push(transport_all, transport_error);
     transport_all.on('rotate', () => {
         // do something fun
@@ -78,7 +78,15 @@ if (config.debug) {
     // }),
 }
 
-
+/**
+ * logger library
+ * 
+ * @example
+ * logger.info('text');
+ * logger.error('text');
+ * logger.warn('text');
+ * logger.debug('text');
+ */
 const logger = winston.createLogger({
     level: (config.debug) ? 'debug' : 'info',
     format: format_log,

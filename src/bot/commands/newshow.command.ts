@@ -1,8 +1,13 @@
+/**
+ * newshow command
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import config from "@/config";
 import CustomContext from "@/interfaces/customcontext.interface";
 import logger from "@/libs/logger";
 
-export default async (ctx: CustomContext) => {
+export default async (ctx: CustomContext): Promise<void> => {
     try {
         ctx.reply("Escribe el nombre de la serie", {
             reply_markup: {

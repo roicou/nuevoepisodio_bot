@@ -1,3 +1,8 @@
+/**
+ * config
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import dotenv from 'dotenv';
 
 const envFound = dotenv.config();
@@ -22,13 +27,14 @@ export default {
     debug: process.env.DEBUG === "true",
 
     /**
- * logs config
- */
+     * logs config
+     */
     logs: {
         log_path: process.env.LOG_PATH || "logs",
         compress_before_days: process.env.COMPRESS_BEFORE_DAYS || 3,
         cron_hour: process.env.CRON_HOUR || 3
     },
+    
     /**
      * mongoose
      */

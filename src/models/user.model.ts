@@ -1,5 +1,8 @@
-// model for user.interface
-
+/**
+ * user mongoose model
+ * @author Roi C. <htts://github.com/roicou/>
+ * @license MIT
+ */
 import { Schema, model } from 'mongoose';
 import UserInterface from '@/interfaces/user.interface';
 

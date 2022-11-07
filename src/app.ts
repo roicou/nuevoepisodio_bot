@@ -1,6 +1,6 @@
 /**
- * Bot de Telegram
- * @author Roi C.
+ * Telegram bot APP
+ * @author Roi C. <https://github.com/roicou/>
  * @version 1.0.0
  * @license MIT
  */
@@ -11,10 +11,15 @@ import config from '@/config';
 import CustomContext from './interfaces/customcontext.interface';
 
 
-void (async () => {
+void (async (): Promise<void> => {
     try {
+        // instance of bot
         const bot: Telegraf<CustomContext> = new Telegraf(config.debug ? config.telegram.token_debug : config.telegram.token);
+
+        // load all loaders
         await loaders(bot);
+
+        // start bot
         await bot.launch();
         process.once('SIGINT', () => bot.stop('SIGINT'));
         process.once('SIGTERM', () => bot.stop('SIGTERM'));
