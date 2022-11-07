@@ -1,6 +1,6 @@
 {
   "name": "nuevoepisodio_bot",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Bot de Telegram que notifica nuevos episodios",
   "main": "main.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_PATH=./dist node dist/app.js",
     "build:start": "npm run build && npm start",
+    "reinstall": "rm -rf node_modules && npm install",
     "optimize-users": "npm run build && NODE_PATH=./dist node dist/scripts/optimize-users.js",
     "lint": "eslint --ext .js,.ts ."
   },
