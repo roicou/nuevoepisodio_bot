@@ -136,13 +136,13 @@ class TelegrafService {
             let poster_id: string = config.debug ? show.poster_debug_id : show.poster_id;
             if (!poster_id) {
                 try {
-                    const test_sender = await bot.telegram.sendPhoto(config.telegram.test_group_id, `https://image.tmdb.org/t/p/w500${show.poster_url}`);
+                    const test_sender = await bot.telegram.sendPhoto(config.telegram.test_group_id, `https://image.tmdb.org/t/p/original${show.poster_url}`);
                     poster_id = test_sender?.photo[test_sender.photo.length - 1]?.file_id;
                     if (poster_id) {
                         await showService.updatePosterId(show.id, poster_id);
                     }
                 } catch (error) {
-                    error.message += `\n\tPhoto url: https://image.tmdb.org/t/p/w500${show.poster_url}`;
+                    error.message += `\n\tPhoto url: https://image.tmdb.org/t/p/original${show.poster_url}`;
                     logger.error(error);
                 }
             }
