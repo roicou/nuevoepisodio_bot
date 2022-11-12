@@ -69,12 +69,19 @@ class TelegrafService {
                 await showService.upsertShows([data]);
             } catch (err) {
                 logger.error(err);
-                return ctx.reply('Error al añadir la serie');
+                return ctx.reply('Error al añadir la serie. Vuelve a intentarlo de nuevo.');
+
             }
         }
         show = await showService.getShowById(id);
         console.log(show);
-        await userService.addShow(ctx.from.id, show.id);
+        try {
+            await userService.addShow(ctx.from.id, show.id);
+        } catch (err) {
+
+            logger.error(err);
+            return ctx.reply('Error al añadir la serie. Vuelve a intentarlo de nuevo.');
+        }
 
         return ctx.reply(`${show.name} agregada correctamente.`, {
             //reply_to_message_id: ctx.message.message_id,
@@ -145,7 +152,7 @@ class TelegrafService {
             let poster_id: string = config.debug ? show.poster_debug_id : show.poster_id;
             if (!poster_id) {
                 poster_id = await this.tryPhoto(bot, show.poster_url);
-                if(poster_id) {
+                if (poster_id) {
                     await showService.updatePosterId(show.id, poster_id);
                 }
             }
