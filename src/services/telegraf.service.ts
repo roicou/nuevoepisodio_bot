@@ -27,7 +27,7 @@ class TelegrafService {
 
         switch (subquery) {
             case 'notification':
-                if(isNaN(value)) {
+                if (isNaN(value)) {
                     return ctx.reply('Error al modificar la configuración');
                 }
                 await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
@@ -165,10 +165,10 @@ class TelegrafService {
         const users = await userService.getAllUsersWithShows(hour);
         for (const user of users) {
             try {
-            logger.debug('user:');
-            logger.debug(user);
-            await bot.telegram.sendMessage(user.id, 'Próximos estrenos:');
-            await this.sendNextEpisodes(bot, user.id, user.shows);
+                logger.debug('user:');
+                logger.debug(user);
+                await bot.telegram.sendMessage(user.id, 'Próximos estrenos:');
+                await this.sendNextEpisodes(bot, user.id, user.shows);
             } catch (err) {
                 // some fun
             }
