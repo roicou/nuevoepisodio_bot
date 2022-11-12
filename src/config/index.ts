@@ -40,6 +40,7 @@ export default {
      */
     mongodb: {
         uri: process.env.MONGODB_URI,
+        uri_test: process.env.MONGODB_URI_TEST,
         user: process.env.MONGODB_USER,
         password: process.env.MONGODB_PASSWORD
     },
