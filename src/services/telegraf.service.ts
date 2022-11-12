@@ -25,7 +25,7 @@ class TelegrafService {
     public async updateUserNotificationTime(ctx: CustomContext, hour: number): Promise<Message.TextMessage> {
         await userService.updateUserNotificationTime(ctx.from.id, hour);
         const callback_query = ctx.update as any;
-        await ctx.deleteMessage(callback_query.callback_query.message.id);
+        await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
         return ctx.reply(`Hora de notificación actualizada a las ${hour}:00`);
     }
     /**
@@ -36,7 +36,7 @@ class TelegrafService {
      */
     public async deleteUserShow(ctx: CustomContext, id: number): Promise<Message.TextMessage> {
         const callback_query = ctx.update as any;
-        await ctx.deleteMessage(callback_query.callback_query.message.id);
+        await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
         if (!ctx.user.shows.includes(id)) {
             return ctx.reply('No estás siguiendo esta serie');
         }
@@ -55,16 +55,25 @@ class TelegrafService {
      */
     public async addNewShow(ctx: CustomContext, id: number): Promise<Message.TextMessage> {
         const callback_query = ctx.update as any;
-        await ctx.deleteMessage(callback_query.callback_query.message.id);
+        await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
         if (ctx.user.shows.includes(id)) {
             return ctx.reply('Ya estás siguiendo esta serie');
         }
         let show = await showService.getShowById(id);
         if (!show) {
+            const db_shows: ShowInterface[] = await showService.getAllShows();
             const tmdb_show = await tmdbService.getShowById(id);
-            await showService.upsertShows([tmdb_show]);
+            logger.debug('show; ' + JSON.stringify(tmdb_show, null, 2));
+            try {
+                const data = await tmdbService.updateInfoShow(id, db_shows);
+                await showService.upsertShows([data]);
+            } catch (err) {
+                logger.error(err);
+                return ctx.reply('Error al añadir la serie');
+            }
         }
         show = await showService.getShowById(id);
+        console.log(show);
         await userService.addShow(ctx.from.id, show.id);
 
         return ctx.reply(`${show.name} agregada correctamente.`, {
@@ -135,15 +144,9 @@ class TelegrafService {
             // and get the telegram photo id
             let poster_id: string = config.debug ? show.poster_debug_id : show.poster_id;
             if (!poster_id) {
-                try {
-                    const test_sender = await bot.telegram.sendPhoto(config.telegram.test_group_id, `https://image.tmdb.org/t/p/original${show.poster_url}`);
-                    poster_id = test_sender?.photo[test_sender.photo.length - 1]?.file_id;
-                    if (poster_id) {
-                        await showService.updatePosterId(show.id, poster_id);
-                    }
-                } catch (error) {
-                    error.message += `\n\tPhoto url: https://image.tmdb.org/t/p/original${show.poster_url}`;
-                    logger.error(error);
+                poster_id = await this.tryPhoto(bot, show.poster_url);
+                if(poster_id) {
+                    await showService.updatePosterId(show.id, poster_id);
                 }
             }
 
@@ -174,6 +177,25 @@ class TelegrafService {
                 parse_mode: 'HTML',
             });
         }
+    }
+
+    private async tryPhoto(bot: Telegraf<CustomContext>, poster_url: string) {
+        try {
+            const test_sender = await bot.telegram.sendPhoto(config.telegram.test_group_id, `https://image.tmdb.org/t/p/original${poster_url}`);
+            return test_sender?.photo[test_sender.photo.length - 1]?.file_id;
+        } catch (error) {
+            error.message += `\nPhoto url: https://image.tmdb.org/t/p/original${poster_url}`;
+            logger.error(error);
+        }
+        try {
+            logger.info("Error sending photo, trying other resolution");
+            const test_sender = await bot.telegram.sendPhoto(config.telegram.test_group_id, `https://image.tmdb.org/t/p/w500${poster_url}`);
+            return test_sender?.photo[test_sender.photo.length - 1]?.file_id;
+        } catch (error) {
+            error.message += `\nPhoto url: https://image.tmdb.org/t/p/w500${poster_url}`;
+            logger.error(error);
+        }
+        return null;
     }
 
     /**

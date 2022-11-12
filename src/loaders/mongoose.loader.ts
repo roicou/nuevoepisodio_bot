@@ -13,7 +13,7 @@ import logger from '@/libs/logger'
 export default async (): Promise<void> => {
     try {
 
-        await mongoose.connect(config.mongodb.uri, {
+        await mongoose.connect(config.debug ? config.mongodb.uri_test : config.mongodb.uri, {
             user: config.mongodb.user,
             pass: config.mongodb.password
         });

@@ -47,22 +47,24 @@ class ShowService {
     public async upsertShows(shows_to_upsert: ShowInterface[]) {
         const bulk = [];
         for (const show of shows_to_upsert) {
+            const set_or_insert = {
+                name: show.name,
+                episode: show.episode,
+                date: show.date,
+                service: show.service,
+                poster_url: show.poster_url,
+                poster_id: show.poster_id
+            }
             bulk.push({
                 updateOne: {
                     filter: { id: show.id },
                     update: {
-                        $set: {
-                            name: show.name,
-                            episode: show.episode,
-                            date: show.date,
-                            service: show.service,
-                            poster_url: show.poster_url,
-                            poster_id: show.poster_id
-                        }
+                        $set: set_or_insert,
+                        // $setOnInsert: set_or_insert
                     },
                     upsert: true
                 }
-            })
+            });
         }
         showModel.bulkWrite(bulk);
     }
