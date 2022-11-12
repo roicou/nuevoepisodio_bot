@@ -164,10 +164,14 @@ class TelegrafService {
     public async sendCronEpisodes(bot: Telegraf<CustomContext>, hour: number): Promise<void> {
         const users = await userService.getAllUsersWithShows(hour);
         for (const user of users) {
+            try {
             logger.debug('user:');
             logger.debug(user);
             await bot.telegram.sendMessage(user.id, 'Próximos estrenos:');
             await this.sendNextEpisodes(bot, user.id, user.shows);
+            } catch (err) {
+                // some fun
+            }
         }
     }
 
