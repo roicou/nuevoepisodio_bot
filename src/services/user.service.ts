@@ -21,6 +21,15 @@ class UserService {
     }
 
     /**
+     * update notification day
+     * @param id telegram id
+     * @param hour  
+     */
+     public async updateUserNotificationDay(id: number, day: number): Promise<UpdateResult> {
+        return userModel.updateOne({ id }, { $set: { "config.notification_days": day } });
+    }
+
+    /**
      * gets user from database
      * @param telegram_id telegram id
      * @returns 
@@ -44,7 +53,7 @@ class UserService {
      * @returns 
      */
     public async getAllUsersWithShows(hour: number) {
-        return userModel.aggregate([
+        const aggregate = [
             {
                 $match: {
                     shows: { $exists: true, $ne: [] },
@@ -55,15 +64,17 @@ class UserService {
                 // get shows from show collection where id is in user.shows array and show date is today
                 $lookup: {
                     from: 'shows',
-                    let: { shows: '$shows' },
+                    let: { shows: '$shows', days: '$config.notification_days' },
                     pipeline: [
                         {
                             $match: {
                                 $expr: {
                                     $and: [
                                         { $in: ['$id', '$$shows'] },
-                                        { $gte: ['$date', DateTime.local().startOf('day')] },
-                                        { $lte: ['$date', DateTime.local().endOf('day')] }
+                                        { $eq: [
+                                            { $dateToString: { format: '%Y-%m-%d', date: { $add: '$date' } } },
+                                            { $dateToString: { format: '%Y-%m-%d', date: { $add: [DateTime.local().startOf('day').toJSDate(), { $multiply: ['$$days', 24  * 60 * 60 * 1000] }] } } }
+                                        ] }
                                     ]
                                 }
                             }
@@ -78,7 +89,9 @@ class UserService {
                     shows: { $exists: true, $ne: [] }
                 }
             }
-        ])
+        ];
+        logger.debug('aggregate '+ JSON.stringify(aggregate, null, 2));
+        return userModel.aggregate(aggregate);
     }
 
     /**

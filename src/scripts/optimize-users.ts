@@ -19,19 +19,11 @@ void (async (): Promise<void> => {
     console.log('users', users)
     for (const user of users) {
         // transform all user.shows to number
-        const shows: number[] = [];
-        for (const show of user.shows) {
-            if (typeof show === 'string') {
-                shows.push(parseInt(show));
-            } else {
-                shows.push(show);
-            }
-        }
-        user.shows = shows;
-        if(!user.config.notification_hour) {
-            user.config.notification_hour = 10;
+        if(!user.config.notification_days) {
+            user.config.notification_days = 0;
         }
     }
+    console.log(users);
     await userService.updateUsers(users);
     console.log("Usuarios actualizados.")
     process.exit();

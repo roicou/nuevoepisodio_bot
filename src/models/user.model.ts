@@ -28,6 +28,11 @@ export default model<UserInterface>('User', new Schema<UserInterface>({
             required: false,
             default: true,
         },
+        notification_days: {
+            type: Number,
+            required: false,
+            default: 0,
+        },
         notification_hour: {
             type: Number,
             required: false,

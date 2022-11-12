@@ -22,11 +22,44 @@ class TelegrafService {
      * @param ctx 
      * @param hour 
      */
-    public async updateUserNotificationTime(ctx: CustomContext, hour: number): Promise<Message.TextMessage> {
-        await userService.updateUserNotificationTime(ctx.from.id, hour);
+    public async updateUserNotificationTime(ctx: CustomContext, subquery: string, value: number): Promise<Message.TextMessage> {
         const callback_query = ctx.update as any;
-        await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
-        return ctx.reply(`Hora de notificación actualizada a las ${hour}:00`);
+
+        switch (subquery) {
+            case 'notification':
+                if(isNaN(value)) {
+                    return ctx.reply('Error al modificar la configuración');
+                }
+                await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
+                await userService.updateUserNotificationDay(ctx.from.id, value);
+                const clocks = ["🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚", "🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚"];
+                const buttons = [];
+                for (let i = 0; i < 24; i++) {
+                    buttons.push({
+                        text: `${clocks[i]} ${(i < 10) ? "0" + i : i}:00`,
+                        callback_data: `settings:hour:${i}`
+                    });
+                }
+                const keyboard = [];
+                while (buttons.length) {
+                    keyboard.push(buttons.splice(0, 3));
+                }
+                await ctx.reply(`Notificaciones: ${(value ? 'un día antes' : 'el mismo día')} del estreno.`);
+                return ctx.reply(`Selecciona la hora de la notificación:`, {
+                    //buttons
+                    reply_markup: {
+                        inline_keyboard: keyboard
+                    }
+                });
+            case 'hour':
+                if (isNaN(value)) {
+                    return ctx.reply('Error al modificar la hora');
+                }
+                await userService.updateUserNotificationTime(ctx.from.id, value);
+                await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
+                return ctx.reply(`Hora de notificación actualizada a las ${value}:00`);
+        }
+
     }
     /**
      * delete selected show from user shows
@@ -35,6 +68,9 @@ class TelegrafService {
      * @returns 
      */
     public async deleteUserShow(ctx: CustomContext, id: number): Promise<Message.TextMessage> {
+        if (isNaN(id)) {
+            return ctx.reply('Error al añadir la serie');
+        }
         const callback_query = ctx.update as any;
         await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
         if (!ctx.user.shows.includes(id)) {
@@ -54,6 +90,9 @@ class TelegrafService {
      * @returns 
      */
     public async addNewShow(ctx: CustomContext, id: number): Promise<Message.TextMessage> {
+        if (isNaN(id)) {
+            return ctx.reply('Error al añadir la serie');
+        }
         const callback_query = ctx.update as any;
         await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
         if (ctx.user.shows.includes(id)) {
@@ -122,12 +161,12 @@ class TelegrafService {
      * @param bot bot instance
      * @param hour hour to send the message
      */
-    public async sendTodayEpisodes(bot: Telegraf<CustomContext>, hour: number): Promise<void> {
+    public async sendCronEpisodes(bot: Telegraf<CustomContext>, hour: number): Promise<void> {
         const users = await userService.getAllUsersWithShows(hour);
         for (const user of users) {
             logger.debug('user:');
             logger.debug(user);
-            await bot.telegram.sendMessage(user.id, 'Estrenos hoy:');
+            await bot.telegram.sendMessage(user.id, 'Próximos estrenos:');
             await this.sendNextEpisodes(bot, user.id, user.shows);
         }
     }

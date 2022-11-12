@@ -44,18 +44,23 @@ export default async (bot: Telegraf<CustomContext>): Promise<void> => {
     bot.on('callback_query', async (ctx: CustomContext) => {
         try {
             const data = ctx.callbackQuery.data;
-            const query = data.split(':')[0] || null;
-            const value = parseInt(data.split(':')[1]) || null;
-            if (!value || isNaN(value)) {
-                throw new Error('id is not a number');
-            }
-            switch (query) {
-                case 'newshow':
-                    return telegrafService.addNewShow(ctx, value);
-                case 'deleteshow':
-                    return telegrafService.deleteUserShow(ctx, value);
-                case 'settings':
-                    return telegrafService.updateUserNotificationTime(ctx, value);
+            const data_splited = data.split(':');
+            const query = data_splited.shift() || null;
+            if (query) {
+                const value = data_splited.pop() || null;
+                const subquery = (data_splited.length) ? data_splited : null;
+                let id: number;
+                switch (query) {
+                    case 'newshow':
+                        id = parseInt(value);
+                        return telegrafService.addNewShow(ctx, id);
+                    case 'deleteshow':
+                        id = parseInt(value);
+                        return telegrafService.deleteUserShow(ctx, id);
+                    case 'settings':
+                        id = parseInt(value);
+                        return telegrafService.updateUserNotificationTime(ctx, subquery[0], id);
+                }
             }
         } catch (error) {
             logger.error("callback_query error: " + error);
@@ -65,11 +70,12 @@ export default async (bot: Telegraf<CustomContext>): Promise<void> => {
 
     // cron jobs
     cron.schedule('0 * * * *', async () => {
-        try {
-            await telegrafService.sendTodayEpisodes(bot, parseInt(DateTime.local().toFormat('HH')))//parseInt(DateTime.local().toFormat('HH')));
-        } catch (error) {
-            logger.error(error);
-        }
+    try {
+        logger.info('cron job de enviar episodios');
+        await telegrafService.sendCronEpisodes(bot, parseInt(DateTime.local().toFormat('HH')))//parseInt(DateTime.local().toFormat('HH')));
+    } catch (error) {
+        logger.error(error);
+    }
     });
 
 }

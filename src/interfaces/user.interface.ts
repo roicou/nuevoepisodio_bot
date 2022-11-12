@@ -9,6 +9,7 @@ export default interface UserInterface {
     config?: {
         language?: string;
         active?: boolean;
+        notification_days?: number;
         notification_hour?: number;
     },
     createdAt?: Date;
