@@ -19,6 +19,7 @@ export default {
         token: process.env.TELEGRAM_TOKEN,
         token_debug: process.env.TELEGRAM_TOKEN_DEBUG,
         test_group_id: process.env.TELEGRAM_TEST_GROUP_ID,
+        admins: process.env.TELEGRAM_ADMIN_IDS.split(',') || [],
     },
 
     /**
