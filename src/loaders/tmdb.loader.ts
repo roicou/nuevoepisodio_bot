@@ -13,6 +13,7 @@ import logger from '@/libs/logger';
  */
 export default async (): Promise<void> => {
     // cron job to update the movie list every day at 2:00 AM
+    await tmdbService.updateShows();
     cron.schedule('0 0 * * *', async () => {
         try {
             await tmdbService.updateShows();

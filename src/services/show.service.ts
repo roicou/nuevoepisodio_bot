@@ -6,7 +6,6 @@
 import config from '@/config';
 import ShowInterface from '@/interfaces/show.interface';
 import showModel from '@/models/show.model';
-import _, { takeWhile } from 'lodash';
 import { DateTime, Settings } from 'luxon';
 import { DeleteResult } from "mongodb";
 import { UpdateWriteOpResult } from 'mongoose';

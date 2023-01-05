@@ -13,7 +13,6 @@ import userService from '@/services/user.service';
 import { Telegraf } from 'telegraf';
 import tmdbService from '@/services/tmdb.service';
 import { Message } from 'telegraf/typings/core/types/typegram';
-import { UpdateWriteOpResult } from 'mongoose';
 Settings.defaultZone = config.timezone;
 
 class TelegrafService {
@@ -32,7 +31,9 @@ class TelegrafService {
                 }
                 await ctx.deleteMessage(callback_query.callback_query.message.id).catch((err) => logger.error(err));
                 await userService.updateUserNotificationDay(ctx.from.id, value);
+                // eslint-disable-next-line no-case-declarations
                 const clocks = ["🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚", "🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚"];
+                // eslint-disable-next-line no-case-declarations
                 const buttons = [];
                 for (let i = 0; i < 24; i++) {
                     buttons.push({
@@ -40,6 +41,7 @@ class TelegrafService {
                         callback_data: `settings:hour:${i}`
                     });
                 }
+                // eslint-disable-next-line no-case-declarations
                 const keyboard = [];
                 while (buttons.length) {
                     keyboard.push(buttons.splice(0, 3));
@@ -106,14 +108,16 @@ class TelegrafService {
             try {
                 const data = await tmdbService.updateInfoShow(id, db_shows);
                 await showService.upsertShows([data]);
+                show = data;
             } catch (err) {
                 logger.error(err);
                 return ctx.reply('Error al añadir la serie. Vuelve a intentarlo de nuevo.');
 
             }
         }
-        show = await showService.getShowById(id);
-        console.log(show);
+        if(!show) {
+            return ctx.reply('Error al añadir la serie. Vuelve a intentarlo de nuevo.');
+        }
         try {
             await userService.addShow(ctx.from.id, show.id);
         } catch (err) {
@@ -142,7 +146,7 @@ class TelegrafService {
             return ctx.reply('No se encontraron resultados');
         }
         const buttons = [];
-        for (let show of shows.results) {
+        for (const show of shows.results) {
             const date = DateTime.fromFormat(show.first_air_date || '', 'yyyy-MM-dd');
             buttons.push([{
                 text: `${show.name}${date.isValid ? ` (${date.toFormat('yyyy')})` : ''}`,
@@ -259,7 +263,7 @@ class TelegrafService {
         media_group[0].caption = message;
         media_group[0].parse_mode = 'HTML';
 
-        const sended = await bot.telegram.sendMediaGroup(chat_id, media_group, {
+        await bot.telegram.sendMediaGroup(chat_id, media_group, {
             // reply_to_message_id: ctx.message?.message_id,
             // allow_sending_without_reply: true
         });

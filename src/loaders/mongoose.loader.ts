@@ -11,6 +11,7 @@ import logger from '@/libs/logger'
  * Load mongoose and connect to database
  */
 export default async (): Promise<void> => {
+    // eslint-disable-next-line no-useless-catch
     try {
 
         await mongoose.connect(config.debug ? config.mongodb.uri_test : config.mongodb.uri, {

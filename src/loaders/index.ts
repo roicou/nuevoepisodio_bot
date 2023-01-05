@@ -15,6 +15,7 @@ import tmdbLoader from '@/loaders/tmdb.loader';
  * @param bot
  */
 export default async (bot: Telegraf<CustomContext>): Promise<void> => {
+    // eslint-disable-next-line no-useless-catch
     try {
         await mongooseLoader();
         await telegrafLoader(bot);

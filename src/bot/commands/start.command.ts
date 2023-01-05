@@ -3,7 +3,6 @@
  * @author Roi C. <htts://github.com/roicou/>
  * @license MIT
  */
-import config from "@/config";
 import CustomContext from "@/interfaces/customcontext.interface";
 import logger from "@/libs/logger";
 

@@ -7,7 +7,7 @@ import config from "@/config";
 import CustomContext from "@/interfaces/customcontext.interface";
 import logger from "@/libs/logger";
 import userService from "@/services/user.service";
-import { Message, ApiError } from "telegraf/typings/core/types/typegram";
+import { Message } from "telegraf/typings/core/types/typegram";
 
 
 export default async (ctx: CustomContext): Promise<void> => {
@@ -17,7 +17,7 @@ export default async (ctx: CustomContext): Promise<void> => {
         args.shift();
         const text = args.join(' ');
         const users = await userService.getAllUsers();
-        for (let user of users) {
+        for (const user of users) {
             try {
                 await ctx.telegram.sendMessage(user.id, text);
             } catch (error) {

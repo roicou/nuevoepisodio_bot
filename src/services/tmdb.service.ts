@@ -53,6 +53,7 @@ class TMDBService {
         for (const show of user_shows) {
             try {
                 const data = await this.updateInfoShow(show, db_shows);
+                datas.push(data);
             } catch (err) {
                 logger.error(err);
                 continue;
