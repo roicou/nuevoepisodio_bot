@@ -52,7 +52,8 @@ class ShowService {
                 date: show.date,
                 service: show.service,
                 poster_url: show.poster_url,
-                poster_id: show.poster_id
+                poster_id: show.poster_id,
+                providers: show.providers,
             }
             bulk.push({
                 updateOne: {

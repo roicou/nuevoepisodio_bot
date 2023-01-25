@@ -72,6 +72,7 @@ class TMDBService {
 
     public async updateInfoShow(show_id: number, db_shows: ShowInterface[]): Promise<{id: number; name: string; episode: string; date: Date, service: string; poster_url: string; poster_id: string; poster_debug_id: string}> {
             const show_info = await this.getShowById(show_id);
+            const show_providers = await this.getShowProviders(show_id);
             // prepare data to upsert
             const date = show_info.next_episode_to_air ? show_info.next_episode_to_air.air_date : show_info.last_episode_to_air ? show_info.last_episode_to_air.air_date : null;
             // show_info.next_episode_to_air ? show_info.next_episode_to_air.season_number + "x" + (show_info.next_episode_to_air.episode_number > 9) ? show_info.next_episode_to_air.episode_number : '0' + show_info.next_episode_to_air.episode_number : show_info.last_episode_to_air ? show_info.last_episode_to_air.season_number + "x" + show_info.last_episode_to_air.episode_number > 9 ? show_info.last_episode_to_air.episode_number : '0' + show_info.last_episode_to_air.episode_number : null
@@ -90,6 +91,7 @@ class TMDBService {
                 poster_url: show_info.poster_path ? show_info.poster_path : null,
                 poster_id: null,
                 poster_debug_id: null,
+                providers: show_providers.results.ES ? show_providers.results.ES.flatrate.map(provider => provider.provider_name) : []
             };
             const db_show = _.find(db_shows, { id: show_info.id });
             if (db_show && db_show.poster_url === show_info.poster_path) {
@@ -110,6 +112,24 @@ class TMDBService {
         logger.debug("get show url: " + url);
         // const url = config.tmdb.url + "/tv/on_the_air?api_key=" + config.tmdb.api_key + "&language=es-ES";
         // get petition with axios
+        try {
+            const response = await axios({
+                url: url,
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            return response.data;
+        } catch (err) {
+            err.message += '\n\nURL:' + url;
+            throw err;
+        }
+    }
+
+    private async getShowProviders(showId: number) {
+        const url = config.tmdb.url + "/tv/" + showId + "/watch/providers?api_key=" + config.tmdb.api_key;
+        logger.debug("get show providers url: " + url);
         try {
             const response = await axios({
                 url: url,

@@ -12,6 +12,7 @@ export default interface ShowInterface {
     poster_url?: string;
     poster_id?: string;
     poster_debug_id?: string
+    providers?: string[];
     createdAt?: Date;
     updatedAt?: Date;
     __v?: number;

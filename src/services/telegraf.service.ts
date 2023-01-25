@@ -115,7 +115,7 @@ class TelegrafService {
 
             }
         }
-        if(!show) {
+        if (!show) {
             return ctx.reply('Error al añadir la serie. Vuelve a intentarlo de nuevo.');
         }
         try {
@@ -172,7 +172,7 @@ class TelegrafService {
                 logger.debug('user:');
                 logger.debug(user);
                 await bot.telegram.sendMessage(user.id, 'Próximos estrenos:');
-                await this.sendNextEpisodes(bot, user.id, user.shows);
+                await this.sendNextEpisodes(bot, user.id, user.shows, true);
             } catch (err) {
                 // some fun
             }
@@ -185,7 +185,7 @@ class TelegrafService {
      * @param chat_id id of chat
      * @param shows shows to send
      */
-    public async sendNextEpisodes(bot: Telegraf<CustomContext>, chat_id: number, shows: ShowInterface[]): Promise<void> {
+    public async sendNextEpisodes(bot: Telegraf<CustomContext>, chat_id: number, shows: ShowInterface[], individual: boolean = false): Promise<void> {
         let message = '';
         let media_group = [];
         let i = 0;
@@ -204,7 +204,10 @@ class TelegrafService {
                 }
             }
 
-            message += `<b>${show.name}</b> ${show.episode}\n${DateTime.fromJSDate(show.date).toFormat('dd/MM/yyyy')} (${show.service})`;
+            message += `<b>${show.name}</b>\n🎬 ${show.episode}\n📆 ${DateTime.fromJSDate(show.date).toFormat('dd/MM/yyyy')} (${show.service})`;
+            if (show.providers.length) {
+                message += `\n📺 Disponible en: \n        - ${show.providers.map((s) => s).join('\n        - ')}`;
+            }
             if (!poster_id) {
                 message += '\n[🤷‍♂ sin póster]\n\n';
                 continue;
@@ -215,7 +218,7 @@ class TelegrafService {
                 type: 'photo',
                 media: poster_id
             });
-            if (++i > 8) {
+            if (++i > 8 || individual) {
                 await this.sendPhoto(bot, chat_id, media_group, message);
                 i = 0;
                 message = '';

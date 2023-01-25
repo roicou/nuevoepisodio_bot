@@ -47,6 +47,9 @@ export default model<ShowInterface>('Show', new Schema<ShowInterface>({
         required: false,
         default: null,
     },
+    providers: {
+        type: [String],
+    },
     createdAt: {
         type: Date,
         required: false,
