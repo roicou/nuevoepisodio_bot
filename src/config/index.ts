@@ -57,6 +57,17 @@ export default {
     },
 
     /**
+     * playmax
+     */
+    playmax: {
+        url: process.env.PLAYMAX_URL,
+        api_key: process.env.PLAYMAX_API_KEY,
+        auth_key: process.env.PLAYMAX_AUTH_KEY,
+        country: Number(process.env.PLAYMAX_COUNTRY),
+        lang: Number(process.env.PLAYMAX_LANG),
+    },
+
+    /**
      * timezone
      */
     timezone: process.env.TIMEZONE || "Europe/Madrid"

@@ -1,0 +1,1490 @@
+[
+  {
+    "_id": "7525459f-2ea1-48c3-90bf-6efe8bea3f8d",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/71728?language=es-ES",
+    "url": "https://api.themoviedb.org/3/tv/71728?language=es-ES",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:54:25.552Z",
+    "modified": "2023-01-26T15:54:25.552Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "language",
+        "value": "es-ES",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "8da7d3d1-e12a-4f17-aa4d-750351fa5afb",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/71728?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "url": "https://api.themoviedb.org/3/tv/71728?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:54:35.357Z",
+    "modified": "2023-01-26T15:54:35.357Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "language",
+        "value": "es-ES",
+        "isPath": false
+      },
+      {
+        "name": "api_key",
+        "value": "4f70077f7a0141f8ee5d0fbe3c16b163",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "0778be8e-44f3-45b5-b8fc-9c86a63c66a5",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/watch/providers/71728?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "url": "https://api.themoviedb.org/3/tv/watch/providers/71728?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:56:02.080Z",
+    "modified": "2023-01-26T15:56:02.080Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "language",
+        "value": "es-ES",
+        "isPath": false
+      },
+      {
+        "name": "api_key",
+        "value": "4f70077f7a0141f8ee5d0fbe3c16b163",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "42f224f2-ac1c-453e-8a5e-9aae1b05e56a",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/71728/watch/providers?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "url": "https://api.themoviedb.org/3/tv/71728/watch/providers?language=es-ES&api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:56:09.179Z",
+    "modified": "2023-01-26T15:56:09.179Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "language",
+        "value": "es-ES",
+        "isPath": false
+      },
+      {
+        "name": "api_key",
+        "value": "4f70077f7a0141f8ee5d0fbe3c16b163",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "50a69618-58b5-4afa-8724-88489f866669",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/71728/episode_groups?api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "url": "https://api.themoviedb.org/3/tv/71728/episode_groups?api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:57:53.606Z",
+    "modified": "2023-01-26T15:57:53.606Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api_key",
+        "value": "4f70077f7a0141f8ee5d0fbe3c16b163",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "b0cffa89-2d75-4ecf-b617-524032794493",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://api.themoviedb.org/3/tv/71728/external_ids?api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "url": "https://api.themoviedb.org/3/tv/71728/external_ids?api_key=4f70077f7a0141f8ee5d0fbe3c16b163",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T15:58:10.401Z",
+    "modified": "2023-01-26T15:58:10.401Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api_key",
+        "value": "4f70077f7a0141f8ee5d0fbe3c16b163",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "79685388-de21-491f-b020-8b21fde8d108",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/json/get/episode/v1.1/17f7c615f8fdfb71d5bd0aec?episodeId=f40804#6X04",
+    "url": "https://playmax.mx/api/json/get/episode/v1.1/17f7c615f8fdfb71d5bd0aec?episodeId=f40804#6X04",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:10:12.845Z",
+    "modified": "2023-01-26T16:10:12.845Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "episodeId",
+        "value": "f40804#6X04",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "6abf20a3-e861-4541-b66a-e56dff3ea716",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/user_authorization/v1/{apiKey}/",
+    "url": "https://playmax.mx/api/{returnFormat}/get/user_authorization/v1/{apiKey}/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:11:20.249Z",
+    "modified": "2023-01-26T16:11:20.249Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "de33dc95-71ae-4ea3-b34e-ba7275922389",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/json/get/episode/v1.1/{api-key}?episodeId=f40804#6X04",
+    "url": "https://playmax.mx/api/json/get/episode/v1.1/{api-key}?episodeId=f40804#6X04",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:11:42.288Z",
+    "modified": "2023-01-26T16:11:42.288Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api-key",
+        "value": "32c2857ad9f6981ce078bbae6a34e1a10616e8db",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "f40804#6X04",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "21b58eb6-9c99-49b2-bf62-0c955feae515",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/json/get/episode/v1.1/{api-key}/{auth-key}?episodeId=f40804#6X04",
+    "url": "https://playmax.mx/api/json/get/episode/v1.1/{api-key}/{auth-key}?episodeId=f40804#6X04",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:13:44.240Z",
+    "modified": "2023-01-26T16:13:44.240Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "api-key",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "auth-key",
+        "value": "32c2857ad9f6981ce078bbae6a34e1a10616e8db",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "f40804#6X04",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "38ca9933-fe8f-47f1-9fa6-fcd591a034d3",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/",
+    "url": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:15:43.051Z",
+    "modified": "2023-01-26T16:15:43.051Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "d008d457-2871-4f4e-a608-2532a21c58e5",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=f40804#6X04",
+    "url": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=f40804#6X04",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:16:20.425Z",
+    "modified": "2023-01-26T16:16:20.425Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "f40804#6X04",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e1018964-7666-4ef1-bcb6-86131a26f0ab",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=6X04",
+    "url": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=6X04",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:16:52.772Z",
+    "modified": "2023-01-26T16:16:52.772Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "6X04",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "0cfa099a-b217-47b9-a62d-a239ab7d358a",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=f40804",
+    "url": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=f40804",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:18:33.225Z",
+    "modified": "2023-01-26T16:18:33.225Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaId",
+        "value": "f40804",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "eefaf3f2-71ad-4d6e-875e-ced4cf93aa50",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=el-joven-sheldon-f40804",
+    "url": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=el-joven-sheldon-f40804",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:18:38.509Z",
+    "modified": "2023-01-26T16:18:38.509Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaId",
+        "value": "el-joven-sheldon-f40804",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "ff02e4da-2c26-4829-91cd-c8db52d16ec8",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=40804",
+    "url": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=40804",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:18:43.724Z",
+    "modified": "2023-01-26T16:18:43.724Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaId",
+        "value": "40804",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "d2546e20-c217-409c-9d2b-5013e923d5d5",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/search/v1.1/{apiKey}/{sessionId|authKey}/?query=El joven Sheldon&sections=1",
+    "url": "https://playmax.mx/api/{returnFormat}/get/search/v1.1/{apiKey}/{sessionId|authKey}/?query=el joven sheldon&sections=1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:21:20.348Z",
+    "modified": "2023-01-30T09:32:03.871Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "query",
+        "value": "el joven sheldon",
+        "isPath": false
+      },
+      {
+        "name": "sections",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "175b222d-bf3f-46a2-961c-ae45b11475da",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=40804&showEpisodeSynopsis=false",
+    "url": "https://playmax.mx/api/{returnFormat}/get/ficha/v1.2/{apiKey}/{sessionId|authKey}/?fichaId=40804&showEpisodeSynopsis=false",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-26T16:30:08.360Z",
+    "modified": "2023-01-26T16:30:08.360Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaId",
+        "value": "40804",
+        "isPath": false
+      },
+      {
+        "name": "showEpisodeSynopsis",
+        "value": "false",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "a22b2c03-d394-45a7-93f5-f3d7572bec49",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=1120868",
+    "url": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=1120868",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:33:27.302Z",
+    "modified": "2023-01-30T09:33:45.045Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "1120868",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "65078b78-eb9f-4246-b709-c266a5bcebe1",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=1149756",
+    "url": "https://playmax.mx/api/{returnFormat}/get/episode/v1.1/{apiKey}/{sessionId|authKey}/?episodeId=1149756",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:34:25.847Z",
+    "modified": "2023-01-30T09:34:25.847Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "episodeId",
+        "value": "1149756",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "89a23455-e8fc-402b-8954-8878853bf459",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:37:31.169Z",
+    "modified": "2023-01-30T09:39:14.827Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isDisabled": true,
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "bd2e91d0-2fa9-443e-b8c1-372af42c6f25",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:38:08.188Z",
+    "modified": "2023-01-30T09:38:08.188Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "49420917-9c92-4ad6-8729-d35c2d960e47",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:38:45.292Z",
+    "modified": "2023-01-30T09:38:45.292Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "39c55cdf-7ea4-46bb-a9b5-c257ab7e2ad0",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2&firstRelease=true",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2&firstRelease=true",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:38:51.381Z",
+    "modified": "2023-01-30T09:38:51.381Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "1e4e17a7-4550-4846-bc7a-d46edfb47206",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?year=2023&month=2",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?year=2023&month=2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:39:41.893Z",
+    "modified": "2023-01-30T09:39:41.893Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "28f707d7-90b9-4b73-9603-9eb224466248",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?year=2023&month=2&type=all",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?year=2023&month=2&type=all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:40:36.586Z",
+    "modified": "2023-01-30T09:40:36.586Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "882e2e8e-1f0d-4047-8682-7b8f8cd1c399",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&type=all",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&type=all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:40:44.713Z",
+    "modified": "2023-01-30T09:40:44.713Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "bf11ba43-54f5-4f85-8062-658c09ec3bd5",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=[1]&releaseCountry=2&firstRelease=true&year=2023&month=2&type=all",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?fichaType=[1]&releaseCountry=2&firstRelease=true&year=2023&month=2&type=all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:41:46.316Z",
+    "modified": "2023-01-30T09:41:46.316Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "fichaType",
+        "value": "[1]",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "20ac863e-9a3b-435b-ab05-e143fc4ace87",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:42:53.968Z",
+    "modified": "2023-01-30T09:42:53.968Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "82d4d3de-bac4-4c11-84f9-2b6ef69667e6",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=Serie&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=Serie&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:43:11.106Z",
+    "modified": "2023-01-30T09:43:11.106Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "Serie",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "5f9756b7-2ff0-48b1-987c-dc2e21a3a345",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=Series&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=Series&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:43:27.352Z",
+    "modified": "2023-01-30T09:43:56.591Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "Series",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"fichaType\": 2\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8e0fce29-28f7-43fb-be53-770dad78b184",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=12&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=12&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:44:42.888Z",
+    "modified": "2023-01-30T09:44:42.888Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "12",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "df0fdbf1-9af7-4711-93dc-f6fb242e93df",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3&releaseLang=1",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3&releaseLang=1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:45:58.948Z",
+    "modified": "2023-01-30T09:45:58.948Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      },
+      {
+        "name": "releaseLang",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "1b14c62c-5aaa-4616-b757-4e95832a2cfa",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=1&releaseType=2,3&releaseLang=1",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=1&releaseType=2,3&releaseLang=1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T09:46:49.147Z",
+    "modified": "2023-01-30T09:46:49.147Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      },
+      {
+        "name": "releaseLang",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e7bae321-f4c5-4ab1-8564-4b5527802c3d",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=3&releaseType=2,3&releaseLang=1",
+    "url": "https://playmax.mx/api/{returnFormat}/get/calendar/v1/{apiKey}/{sessionId|authKey}/?type=all&fichaType=1&releaseCountry=2&firstRelease=true&year=2023&month=2&releaseType=2,3&releaseLang=1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T10:28:29.445Z",
+    "modified": "2023-01-30T15:13:28.149Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "returnFormat",
+        "value": "json",
+        "isPath": true
+      },
+      {
+        "name": "apiKey",
+        "value": "17f7c615f8fdfb71d5bd0aec",
+        "isPath": true
+      },
+      {
+        "name": "sessionId|authKey",
+        "value": "f3b5139e3f79627d35de99ad884401b24370205d",
+        "isPath": true
+      },
+      {
+        "name": "type",
+        "value": "all",
+        "isPath": false
+      },
+      {
+        "name": "fichaType",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "releaseCountry",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "firstRelease",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "year",
+        "value": "2023",
+        "isPath": false
+      },
+      {
+        "name": "month",
+        "value": "2",
+        "isPath": false
+      },
+      {
+        "name": "releaseType",
+        "value": "2,3",
+        "isPath": false
+      },
+      {
+        "name": "releaseLang",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "b682c244-72e7-43e3-8ea8-72c19045531a",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.thunderclient.com/welcome",
+    "url": "https://www.thunderclient.com/welcome",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-30T15:01:50.477Z",
+    "modified": "2023-01-30T15:01:50.477Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

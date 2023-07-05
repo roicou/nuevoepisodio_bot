@@ -72,8 +72,8 @@ class UserService {
                                     $and: [
                                         { $in: ['$id', '$$shows'] },
                                         { $eq: [
-                                            { $dateToString: { format: '%Y-%m-%d', date: { $add: '$date' } } },
-                                            { $dateToString: { format: '%Y-%m-%d', date: { $add: [DateTime.local().startOf('day').toJSDate(), { $multiply: ['$$days', 24  * 60 * 60 * 1000] }] } } }
+                                            { $dateToString: { format: '%Y-%m-%d', timezone: config.timezone, date: { $add: '$date' } } },
+                                            { $dateToString: { format: '%Y-%m-%d', timezone: config.timezone, date: { $add: [DateTime.local().startOf('day').toJSDate(), { $multiply: ['$$days', 24  * 60 * 60 * 1000] }] } } }
                                         ] }
                                     ]
                                 }

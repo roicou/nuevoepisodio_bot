@@ -8,6 +8,7 @@ export default interface ShowInterface {
     name?: string;
     episode?: string | null;
     date?: Date | null;
+    calendar?: boolean;
     service?: string;
     poster_url?: string;
     poster_id?: string;

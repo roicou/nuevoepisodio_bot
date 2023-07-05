@@ -50,6 +50,7 @@ class ShowService {
                 name: show.name,
                 episode: show.episode,
                 date: show.date,
+                calendar: show.calendar,
                 service: show.service,
                 poster_url: show.poster_url,
                 poster_id: show.poster_id,

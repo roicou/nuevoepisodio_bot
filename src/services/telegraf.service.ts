@@ -204,9 +204,15 @@ class TelegrafService {
                 }
             }
 
-            message += `<b>${show.name}</b>\n🎬 ${show.episode}\n📆 ${DateTime.fromJSDate(show.date).toFormat('dd/MM/yyyy')} (${show.service})`;
+            message += `<b>${show.name}</b>\n🎬 ${show.episode}\n📆 ${DateTime.fromJSDate(show.date).toFormat('dd/MM/yyyy')}`;
+            if(DateTime.fromJSDate(show.date).toFormat('HH:mm') !== '00:00') {
+                message += ` ${DateTime.fromJSDate(show.date).toFormat('HH:mm')}`;
+            }
+            if(!show.calendar) {
+                message += ` (en ${show.service})`;
+            }
             if (show.providers.length) {
-                message += `\n📺 Disponible en: \n        - ${show.providers.map((s) => s).join('\n        - ')}`;
+                message += `\n📺 ${show.providers.map((s) => s).join(', ')}`;
             }
             if (!poster_id) {
                 message += '\n[🤷‍♂ sin póster]\n\n';

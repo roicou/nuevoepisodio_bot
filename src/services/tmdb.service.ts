@@ -11,6 +11,7 @@ import showService from './show.service';
 import ShowInterface from '@/interfaces/show.interface';
 import { DateTime, Settings } from 'luxon';
 import logger from '@/libs/logger';
+import playmaxService from './playmax.service';
 Settings.defaultZone = config.timezone;
 class TMDBService {
     /**
@@ -87,12 +88,19 @@ class TMDBService {
                 name: show_info.name,
                 episode: episode || null,
                 date: date ? DateTime.fromFormat(date, 'yyyy-MM-dd').toJSDate() : null,
+                calendar: false,
                 service: show_info.networks.map(network => network.name).join(', '),
                 poster_url: show_info.poster_path ? show_info.poster_path : null,
                 poster_id: null,
                 poster_debug_id: null,
                 providers: show_providers.results.ES ? show_providers.results.ES.flatrate.map(provider => provider.provider_name) : []
             };
+            const calendar = await playmaxService.getCalendarByTitle(data.name);
+            if (calendar) {
+                data.episode = `${calendar.season}x${(calendar.episode < 10 ? '0' : '') + calendar.episode}`;
+                data.date = calendar.date;
+                data.calendar = true;
+            }
             const db_show = _.find(db_shows, { id: show_info.id });
             if (db_show && db_show.poster_url === show_info.poster_path) {
                 data.poster_id = db_show.poster_id;
